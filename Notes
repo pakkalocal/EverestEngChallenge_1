@@ -1,26 +1,66 @@
 This code is a solution to Coding Challenge 1
-    -   Delivery Cost Estimation
-    -   Delivery Time Estimation
+    #1 -   Delivery Cost Estimation
+    #2 -   Delivery Time Estimation
 
-This solution is written in Node.js scripting language.
+This cli application is written in Node.js scripting language.
 
 you can get the solution with the below commands and passing following inputs format
 
-node main.js
+This codebase written using oops concept of javascript and mix of functional programming
+
+-------------------------------------------------------------------------------------------------------------------------
+Code Structure
+--------------
+src
+ - entity.js -->> This files contains all application classes like Package, Offer, Vehicle, Shipment and Config
+ - utils.js --> This is the files for defining methods or operations.
+ - queue.js --> A Queue datastructure implementation using a normal list used for serving shipments.
+ - index.js --> accepts user input, process package data, fetch delivery cost and estimation and output results to console.
+
+Code Testing
+------------
+Below folder contains unit test cases for functions or objects using Jest Framework.
+
+tests
+ - entity.test.js
+ - utils.test.js
+ - queue.test.js
+
+you can run using below commands.
+jest tests/entity.test.js
+jest tests/utils.test.js
+jest tests/queue.test.js
+or
+jest
+------------------------------------------------------------------------------------------------------------------------------
+To run the application ,use below commands and input
+-----------------------------------------------------
+
+node src/index.js
 
 100 5
 PKG1 50 30 OFR001
-PKG2 75 12 OFR008
+PKG2 75 125 OFR008
 PKG3 175 100 OFR003
 PKG4 110 60 OFR002
 PKG5 155 95 NA
 2 70 200
--------------------------------------
-output
 
 PKG1 0 750 3.98
 PKG2 0 1475 1.78
 PKG3 0 2350 1.42
 PKG4 105 1395 0.85
-PKG5 0 2125 4.19
+PKG5 0 2125 4.18
 
+
+----------------------------------------------------------------------------------------------------------------------
+
+Improvements 
+------------
+
+1. There are few unit test cases still to be completed for tests/utils.test.js. 
+2. User input and output could be handled in a more robust way.
+3. need to add more functions in the index.js to make code more readable.
+4. A more better S.O.L.I.D could be applied once everything completely works on OOPS concept.
+5. Integration testing could be done with Jest.
+6. And finally, errors could have handled in a better way.
